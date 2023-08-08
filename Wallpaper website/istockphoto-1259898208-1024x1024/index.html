@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallpaper lover</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            /* scroll-behavior: smooth; */
+        }
+
+        .navbar {
+            height: 60px;
+            width: 1480px;
+            background-color: black;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            /* position: sticky; */
+        }
+
+        .navbar-icon {
+            /* height: 60px;
+            padding: 20px; */
+            /* align-items: center; */
+            display: flex;
+            /* margin-left: 12px; */
+            color: white;
+
+
+        }
+
+        .navbar-icon:hover {
+
+            border: 2px solid white;
+        }
+
+        .navbar-text {
+            font-size: 30px;
+            /* margin-top: 2px;
+            margin-left: 15px; */
+
+            color: white;
+        }
+
+        .navbar-text:hover {
+            border: 2px solid white;
+        }
+
+
+
+        /* .navbar-option {
+            height: 40px;
+            width: 396.45px;
+            margin-top: 18px;
+        } */
+
+        .navbar-search {
+            display: flex;
+            background-color: rgb(240, 240, 138);
+            width: 620px;
+            height: 40px;
+            border-radius: 3px;
+            /* margin-left: 90px; */
+            justify-content: space-evenly;
+        }
+
+        .search-select {
+            width: 50px;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+            padding: 4px;
+            text-align: center;
+            border: none;
+
+        }
+
+        .navbar-search-icon {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-input {
+            width: 100%;
+            font-size: 1rem;
+            border: none;
+        }
+
+        .navbar-search-icon {
+            width: 45px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            font-size: 1.2rem;
+        }
+
+        span {
+            font-size: 0.7rem;
+            /* margin: 63px; */
+        }
+
+        .nav-second {
+            font-size: 0.85rem;
+            font-weight: 700;
+            /* margin-left: 60px; */
+        }
+
+        .navbar-search:hover {
+            border: 2px solid orange;
+        }
+
+        .nav-cart i {
+            font-size: 30px;
+            /* margin-left: 85px; */
+        }
+
+        .nav-cart {
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        .nav-return {
+            margin-left: 1px;
+        }
+
+        .panel {
+            height: 40px;
+            width: 1480px;
+            background-color: #222f3d;
+            display: flex;
+            color: white;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .panel-ops p {
+            display: inline;
+            margin-left: 12px;
+        }
+
+        .panel-ops {
+            width: 68%;
+            font-size: 0.85rem;
+
+        }
+
+        .panel-diff {
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        .hero-section {
+            background-image: url(pixel.jpg);
+            background-size: cover;
+            height: 400px;
+            /* width: 1500px; */
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+
+        }
+
+        .hero-msg {
+            background-color: white;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            width: 100%;
+            margin-bottom: 25px;
+        }
+
+        a {
+            color: #007185;
+        }
+
+        .shop-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            background-color: #e2e7e6;
+        }
+
+        .box {
+            border: 2px solid black;
+            height: 300px;
+            width: 24%;
+            background-color: white;
+            padding: 20px 0px 15px;
+            margin-top: 15px;
+        }
+
+        .box-img {
+            height: 230px;
+            margin-top: 4px;
+            margin-bottom: 16px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .box-content {
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+
+        .box-content p {
+            color: #007185;
+            /* margin-top: 300px; */
+        }
+
+        /* footer */
+
+        footer {
+            margin-top: 15px;
+        }
+
+        .foot-panel1 {
+            background-color: #37475a;
+            color: white;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.85rem;
+        }
+
+        .foot-panel2 {
+            background-color: #222f3d;
+            color: white;
+            height: 300px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        ul {
+            margin-top: 20px;
+        }
+
+        ul a {
+            display: block;
+            font-size: 0.85rem;
+            margin-top: 10px;
+            color: #dddddd;
+
+        }
+
+        .foot-panel3 {
+            background-color: #222f3d;
+            color: white;
+            border: 0.5px solid white;
+            height: 70px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar">
+
+        <div class="navbar-icon">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="navbar-text">
+            <strong><em>Wallpaper</em></strong>
+        </div>
+        <div class="navbar-search">
+            <select class="search-select">
+                <option>All</option>
+            </select>
+            <input type="search" placeholder="Search for Wallpaper" class="search-input">
+            <div class="navbar-search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+        </div>
+        <div class="nav-signin">
+            <p><span>Hello, sign in</span></p>
+            <p class="nav-second">Account & List</p>
+        </div>
+        <div class="nav-return">
+            <p><span>Sign-in</span></p>
+            <p class="nav-second">Others</p>
+        </div>
+        <div class="nav-cart">
+            <i class="fa-light fa-user-alien"></i>
+        </div>
+    </header>
+    <div class="panel">
+        <div class="panel-all">
+            <i class="fa-solid fa-bars"></i>
+            All
+        </div>
+        <div class="panel-ops">
+            <p>All collection</p>
+            <p>Nature</p>
+            <p>Wildlife</p>
+            <p>Sports</p>
+        </div>
+        <div class="panel-diff">
+            Different options
+        </div>
+    </div>
+    <div class="hero-section">
+        <div class="hero-msg">
+            <p>You are on wallpaper.com. You can also view millions of wallpaper. <a href=" ">Wallpaper.in</a></p>
+        </div>
+    </div>
+    <div class="shop-section">
+        <div class="box1 box">
+            <div class="box-content">
+                <h2>Nature and Environment</h2>
+                <div class="box-img" style="background-image: url('istockphoto-157639696-1024x1024.jpg');">
+                    <p>See More</p>
+                </div>
+            </div>
+        </div>
+        <div class="box2 box">
+            <div class="box-content">
+                <h2>Flowers</h2>
+                <div class="box-img" style="background-image: url('istockphoto-506293036-1024x1024.jpg');">
+                    <p>See More</p>
+                </div>
+            </div>
+        </div>
+        <div class="box3 box">
+            <div class="box-content">
+                <h2>Sports</h2>
+                <div class="box-img" style="background-image: url('istockphoto-876899218-1024x1024.jpg');">
+                    <p>See More</p>
+                </div>
+            </div>
+        </div>
+        <div class="box4 box">
+            <div class="box-content">
+                <h2>Education</h2>
+                <div class="box-img" style="background-image: url('istockphoto-1071269380-1024x1024.jpg');">
+                    <p>See More</p>
+                </div>
+            </div>
+        </div>
+
+        <!--  second section -->
+
+
+        <div class="box1 box">
+            <div class="box-content">
+                <h2>Love</h2>
+                <div class="box-img" style="background-image: url('istockphoto-1259898208-1024x1024.jpg');">
+                    <p>See More</p>
+                </div>
+            </div>
+        </div>
+        <div class="box2 box">
+            <div class="box-content">
+                <h2>Coding</h2>
+                <div class="box-img" style="background-image: url('istockphoto-1295900106-1024x1024.jpg');">
+                    <p>See More</p>
+                </div>
+            </div>
+        </div>
+        <div class="box3 box">
+            <div class="box-content">
+                <h2>Technology</h2>
+                <div class="box-img" style="background-image: url('istockphoto-1356364268-1024x1024.jpg');">
+                    <p>See More</p>
+                </div>
+            </div>
+        </div>
+        <div class="box4 box">
+            <div class="box-content">
+                <h2>Happy Moments</h2>
+                <div class="box-img" style="background-image: url('istockphoto-1415055573-1024x1024.jpg');">
+                    <p>See More</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="foot-panel1">Back to top</div>
+        <div class="foot-panel2">
+            <ul>
+                <p>Get to know</p>
+                <a>Home</a>
+                <a>Contact us</a>
+                <a>About</a>
+                <a>Help</a>
+            </ul>
+
+
+
+            <ul>
+                <p>Get to know</p>
+                <a>Home</a>
+                <a>Contact us</a>
+                <a>About</a>
+                <a>Help</a>
+            </ul>
+
+
+
+            <ul>
+                <p>Get to know</p>
+                <a>Home</a>
+                <a>Contact us</a>
+                <a>About</a>
+                <a>Help</a>
+            </ul>
+
+
+
+
+            <ul>
+                <p>Get to know</p>
+                <a>Home</a>
+                <a>Contact us</a>
+                <a>About</a>
+                <a>Help</a>
+            </ul>
+        </div>
+        <div class="foot-panel3">
+
+        </div>
+    </footer>
+</body>
+
+</html>
